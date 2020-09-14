@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -6,34 +7,12 @@ import java.util.Scanner;
  */
 public class main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String  str=scanner.next();
-        scanner.nextLine();
-        int k=scanner.nextInt();
-
-        if(k==1){
-            char min='a';
-            for (int i=0;i<str.length();i++){
-                if (str.charAt(i)<=min) {
-                    min=str.charAt(i);
-                }
-            }
-            System.out.println(min);
-        }else {
-            int pointer=0;
-            char kmin='a';
-            for (int i=0;i<str.length();i++){
-                if (str.charAt(i)<=kmin) {
-                    kmin=str.charAt(i);
-                    pointer++;
-                }
-                if (pointer==k)System.out.println(kmin);
-            }
-        }
-
-//        for (int i=0;i<str.length();i++){
-//
-//        }
-    }
-
+//        System.out.println(toBinary(3,23));
+//        System.out.println(toBinary(3,23).length());
+//    }
+//    public static String toBinary(int num, int digits) {
+//        int value = 1 << digits | num;
+//        String bs = Integer.toBinaryString(value); //0x20 | 这个是为了保证这个string长度是6位数
+//        return  bs.substring(1);
+//    }
 }
