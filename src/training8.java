@@ -37,6 +37,30 @@ public class training8 {
         return sortArray;
     }
 
+    //优化写法
+    // 1.设置flag，如果输入的数组是正序，则直接输出
+    // 2.将第二个循环的循环条件从-1改为-i，减少每次循环遍历的长度（不遍历的已经是有序区）
+    public static int[] bubbleSortB(int[] sourceArray){
+        int[] sortArray=sourceArray;
+        boolean flag=true;
+        for (int i=0;i<sortArray.length;i++){
+            for (int j=0;j<sortArray.length-i;j++){
+                if (sortArray[j]>sortArray[j+1]){
+                    int temp=sortArray[j];
+                    sortArray[j]=sortArray[j+1];
+                    sortArray[j+1]=temp;
+
+                    flag=false;
+                }
+                if (flag) {
+                    break;
+                }
+            }
+        }
+        System.out.println(Array2String(sortArray));
+        return sortArray;
+    }
+
     //打印方法
     private static String Array2String(int[] array){
         StringBuilder str=new StringBuilder();
