@@ -35,10 +35,10 @@ public class training9 {
 
 
         startTime=System.currentTimeMillis();
-        System.out.println("循环开始"+startTime);
+        System.out.println("循环开始==="+startTime);
         System.out.println("fib=="+fibLoop(stairs+1));
         endTime=System.currentTimeMillis();
-        System.out.println("循环结束"+endTime);
+        System.out.println("循环结束==="+endTime);
         System.out.println("耗时==="+(endTime-startTime));
 //        System.out.println("fibRec=="+fibRec(stairs));
     }
